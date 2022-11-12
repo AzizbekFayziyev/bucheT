@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
-import img from "../assets/images/shops/1.png";
+import img1 from "../assets/images/shops/1.png";
+import img2 from "../assets/images/shops/2.png";
 
 export default function Shops() {
     const shopCards = useRef();
@@ -21,7 +22,7 @@ export default function Shops() {
             <div ref={shopCards} className="shop__cards">
 
                 <div className="card">
-                    <img src={img} alt="asda" className="card-img" />
+                    <img src={img1} alt="asda" className="card-img" />
                     <div className="text">
                         <h4 className="card-text">The Loaf</h4>
                         <p className='card-text'>title</p>
@@ -30,7 +31,7 @@ export default function Shops() {
                 </div>
 
                 <div className="card">
-                    <img src={img} alt="asda" className="card-img" />
+                    <img src={img2} alt="asda" className="card-img" />
                     <div className="text">
                         <h4 className="card-text">The Loaf</h4>
                         <p className='card-text'>title</p>
@@ -39,7 +40,7 @@ export default function Shops() {
                 </div>
 
                 <div className="card">
-                    <img src={img} alt="asda" className="card-img" />
+                    <img src={img1} alt="asda" className="card-img" />
                     <div className="text">
                         <h4 className="card-text">The Loaf</h4>
                         <p className='card-text'>title</p>
@@ -48,7 +49,7 @@ export default function Shops() {
                 </div>
 
                 <div className="card">
-                    <img src={img} alt="asda" className="card-img" />
+                    <img src={img2} alt="asda" className="card-img" />
                     <div className="text">
                         <h4 className="card-text">The Loaf</h4>
                         <p className='card-text'>title</p>
@@ -57,7 +58,7 @@ export default function Shops() {
                 </div>
 
                 <div className="card">
-                    <img src={img} alt="asda" className="card-img" />
+                    <img src={img1} alt="asda" className="card-img" />
                     <div className="text">
                         <h4 className="card-text">The Loaf</h4>
                         <p className='card-text'>title</p>
@@ -66,7 +67,7 @@ export default function Shops() {
                 </div>
 
                 <div className="card">
-                    <img src={img} alt="asda" className="card-img" />
+                    <img src={img2} alt="asda" className="card-img" />
                     <div className="text">
                         <h4 className="card-text">The Loaf</h4>
                         <p className='card-text'>title</p>
@@ -75,7 +76,7 @@ export default function Shops() {
                 </div>
 
                 <div className="card">
-                    <img src={img} alt="asda" className="card-img" />
+                    <img src={img1} alt="asda" className="card-img" />
                     <div className="text">
                         <h4 className="card-text">The Loaf</h4>
                         <p className='card-text'>title</p>
@@ -84,7 +85,7 @@ export default function Shops() {
                 </div>
 
                 <div className="card">
-                    <img src={img} alt="asda" className="card-img" />
+                    <img src={img2} alt="asda" className="card-img" />
                     <div className="text">
                         <h4 className="card-text">The Loaf</h4>
                         <p className='card-text'>title</p>

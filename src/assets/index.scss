@@ -193,6 +193,40 @@ body {
 // SHOPS SECTION-END
 
 // RESTAURANTS SECTION
+
+
+.delivery-cnt {
+    padding: 10px;
+
+    .delivery {
+        margin: 20px auto;
+        max-width: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $color-green;
+        border-radius: 20px;
+        padding: 10px 15px;
+
+        i {
+            font-size: $font-size-xl + 1;
+            color: $color-white;
+            margin-right: 25px;
+        }
+
+        h4 {
+            color: $color-white;
+            font-size: $font-size-xl;
+            margin: 10px 0;
+        }
+
+        p {
+            color: $color-white;
+            font-size: $color-white;
+        }
+    }
+}
+
 .restaurants {
     margin-top: 25px;
 
