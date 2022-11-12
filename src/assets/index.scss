@@ -1,0 +1,281 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+// Global Styles
+$color-white: #ffffff;
+$color-black: #1a1a18;
+$color-gray: #ececf1;
+$color-green: #2ECC71;
+$font-size-sm: 1.2rem;
+$font-size-md: 1.5rem;
+$font-size-xl: 2rem;
+
+@mixin button($bg, $color) {
+    transition: 0.3s all ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-sm;
+    outline: none;
+    border: none;
+    padding: 5px 15px;
+    color: $color;
+    background: $bg;
+    border-radius: 15px;
+
+    &:hover {
+        filter: brightness(95%);
+    }
+}
+
+html {
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: $color-white;
+}
+
+.title {
+    font-size: $font-size-xl;
+    font-weight: 700;
+    margin: 25px 0;
+}
+
+// Global Styles-end
+
+// NAVBAR
+.header {
+    padding: 12px 0;
+    border-bottom: 1px solid $color-gray;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+        object-fit: contain;
+        width: 200px;
+    }
+
+    &__input {
+        max-width: 400px;
+        margin: 0 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $color-gray;
+        border-radius: 10px;
+        padding: 8px 10px;
+
+        i {
+            font-size: $font-size-sm;
+            color: $color-black;
+            margin-right: 8px;
+        }
+
+        input {
+            outline: none;
+            border: none;
+        }
+
+        button {
+            margin-left: 10px;
+            @include button($color-green, $color-black)
+        }
+    }
+
+    &__tel {
+        margin-right: 25px;
+        padding: 8px 10px;
+        background: $color-gray;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            text-decoration: none;
+            font-size: $font-size-sm;
+            color: $color-black;
+            font-weight: 400;
+        }
+
+        i {
+            font-size: $font-size-md;
+            margin-right: 6px;
+        }
+    }
+
+    &__profile {
+        display: flex;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            color: $color-black;
+            font-size: $font-size-sm;
+        }
+
+        i {
+            font-size: $font-size-sm;
+            margin-right: 10px;
+        }
+    }
+}
+
+// NAVBAR-END
+
+// SHOPS SECTION
+.shop {
+    margin-top: 25px;
+    position: relative;
+
+
+    i {
+        font-size: $font-size-md - 0.2;
+        color: $color-black;
+    }
+
+    .scroll {
+        border: 1px solid $color-gray;
+        cursor: pointer;
+        padding: 3px 6px;
+        border-radius: 50%;
+        background: $color-white;
+        z-index: 2;
+        position: absolute;
+        top: 60%;
+        transform: translate(-50%, -50%);
+
+        &-left {
+            left: 10px;
+        }
+
+        &-right {
+            right: -10px;
+        }
+    }
+
+    &__cards {
+        overflow-x: hidden;
+        display: flex;
+        margin: 20px auto;
+
+        .card {
+            cursor: pointer;
+            min-width: 200px;
+            margin: 10px;
+
+            img {
+                width: 100%;
+                border-bottom: 1px solid $color-gray;
+            }
+
+            .text {
+                padding: 4px;
+
+                h4 {
+                    margin: 0;
+                    font-size: $font-size-sm + 0.2;
+                    color: $color-black;
+                    padding: 5px 0;
+                }
+
+                p {
+                    font-size: $font-size-sm;
+                    color: gray;
+                }
+            }
+        }
+    }
+}
+
+// SHOPS SECTION-END
+
+// RESTAURANTS SECTION
+.restaurants {
+    margin-top: 25px;
+
+    .navbar {
+        padding: 5px;
+        overflow-x: auto;
+
+        .nav {
+            padding: 0;
+            border-bottom: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            li {
+                margin: 5px;
+
+                &.other {
+                    margin-left: 40px;
+                }
+
+                a {
+                    white-space: nowrap;
+                    transition: 0.3s;
+                    color: $color-black;
+                    border-radius: 10px;
+                    font-size: $font-size-sm;
+                    padding: 8px;
+                    background: $color-gray;
+
+                    &:hover {
+                        filter: brightness(90%);
+                    }
+                }
+            }
+
+        }
+    }
+
+    .row {
+        margin: 10px 0;
+
+        .card {
+            margin-top: 10px;
+
+            .text {
+                padding: 15px;
+
+                span {
+                    font-size: $font-size-sm - 0.2;
+                    margin: 0 8px;
+                    background: $color-gray;
+                    padding: 5px;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+
+// RESTAURANTS SECTION-END
+
+// RESPONSIVE
+
+@media(max-width: 820px) {
+    html {
+        font-size: 14px;
+    }
+
+    .header {
+        flex-direction: column;
+
+        &__input {
+            margin: 12px auto;
+        }
+
+        &__tel,
+        &__profile {
+            display: none;
+        }
+    }
+
+    .restaurants .navbar .nav {
+        flex-wrap: nowrap;
+    }
+}
