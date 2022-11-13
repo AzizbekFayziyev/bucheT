@@ -4,7 +4,13 @@ import logo from "../assets/images/logo.png";
 export default function Navbar() {
     return (
         <nav className='nav header'>
-            <img src={logo} alt='logo' className="logo" />
+            <div className='header__logo'>
+                <img src={logo} alt='logo' className="logo" />
+                <div className="header__languages">
+                    <a href="#">🇷🇺 RU</a>
+                    <a href="#">🇺🇿 UZ</a>
+                </div>
+            </div>
             <div className="header__input">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input placeholder='Завидение, блюдо, товар или кухня' type="text" />
